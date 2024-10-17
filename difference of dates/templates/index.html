@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form method="POST">
+        <label for="date1">Select the first date:</label>
+        <input type="date" id="date1" name="date1" required>
+
+        <br><br>
+
+        <label for="date2">Select the second date:</label>
+        <input type="date" id="date2" name="date2" required>
+
+        <br><br>
+
+        <input type="submit" value="Calculate Difference">
+    </form>
+
+    {% if difference is not none %}
+        <h2>Difference in days: {{ difference }}</h2>
+    {% endif %}
+{% endblock %}
